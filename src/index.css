@@ -31,11 +31,13 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #fffaf3;
 }
 main {
   max-width: 600px;
   margin-right: auto;
   margin-left: auto;
+  padding-top: 0.02px;
 }
 
 h1 {
