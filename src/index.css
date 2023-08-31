@@ -55,9 +55,19 @@ button {
   transition: border-color 0.25s;
 }
 
-button:focus,
+button:hover,
+button:focus {
+  opacity: .8;
+}
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+input[type=text] {
+  border: 1px solid #ffd6be;
+}
+input[type=text]:focus {
+  border: 1px solid #ffbb94;
+  outline: none;
 }
 .input-group {
   display: flex;
