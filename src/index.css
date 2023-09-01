@@ -122,14 +122,19 @@ li {
   align-items: center;
   justify-content: space-between;
   position: relative;
-  padding-left: 40px;
+  padding-left: 0px;
+}
+.item-group label {
+  display: flex;
+  flex: 1;
+  align-items: center;
 }
 .checkbox-todo-name-wrapper input {
   opacity: 0;
   position: absolute;
 }
 .check-circle {
-  position: absolute;
+  /* position: absolute; */
   top: 6px;
   left: 8px;
   width: 20px;
@@ -137,6 +142,7 @@ li {
   border-radius: 10px;
   border: 1px solid #f6752c;
   display: block;
+  margin-right: 6px;
 }
 .check-circle.completed {
   background-color: #f6752c;
