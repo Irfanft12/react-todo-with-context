@@ -38,6 +38,8 @@ main {
   margin-right: auto;
   margin-left: auto;
   padding-top: 0.02px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 h1 {
@@ -113,6 +115,7 @@ li {
   margin-bottom: 6px;
   background-color: #fff1de;
   padding: 6px;
+  border-radius: 4px;
 }
 .item-group {
   display: flex;
@@ -154,6 +157,7 @@ li {
 }
 .delete-btn {
   background-color: #fd422a;
+  color: #ffffff;
 }
 .edit-form {
   display: flex;
