@@ -13,6 +13,10 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+button,
+input {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
 
 * {
   box-sizing: border-box;
@@ -32,6 +36,22 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-color: #fffaf3;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 20px;
+}
+header .logo-text {
+  color: #f6752c;
+  font-size: 20px;
+  margin: 0;
+}
+header img {
+  margin-right: 6px;
+  width: 50px;
 }
 main {
   max-width: 600px;
