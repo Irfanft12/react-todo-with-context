@@ -1,5 +1,7 @@
 import { createContext, useState, useEffect } from "react";
 import {v4 as uuidv4} from "uuid"
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
 const TodoContext = createContext()
 
@@ -39,12 +41,34 @@ function TodoContextProvider(props) {
         }
     }
 
-    function handleTodoDelete(id) {
-        const newTodoList = todoList.filter(t => {
-            return t.id !== id
-        })
+    function handleTodoDelete(item) {
+        const MySwal = withReactContent(Swal)
+        MySwal.fire({
+            // title: <strong>Good job!</strong>,
+            // html: <i>You clicked the button!</i>,
+            // icon: 'success'
+            title: 'Are you sure?',
+            html: `<span>You won't be able to revert <b>${item.todoName}</b>!</span>`,
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Yes, delete it!'
+          }).then(result => {
+            if (result.isConfirmed) {
+                const newTodoList = todoList.filter(t => {
+                    return t.id !== item.id
+                })
+                setTodoList(newTodoList)
+                MySwal.fire(
+                    'Deleted!',
+                    'Your file has been deleted.',
+                    'success'
+                )
+            }
+          })
 
-        setTodoList(newTodoList)
+        
     }
 
     function handleTodoUpdate(nt) {

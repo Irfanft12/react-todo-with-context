@@ -209,6 +209,9 @@ li {
   background-color: #f6752c;
   color: #ffffff;
 }
+div:where(.swal2-container) button:where(.swal2-styled).swal2-default-outline:focus {
+  box-shadow: 0 0 0 3px rgba(230, 129, 98, 0.5);
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

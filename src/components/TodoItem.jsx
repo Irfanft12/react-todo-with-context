@@ -40,7 +40,7 @@ export default function TodoItem({ item }) {
               Edit
             </button>
             <button
-              onClick={() => context.handleTodoDelete(item.id)}
+              onClick={() => context.handleTodoDelete(item)}
               className="delete-btn"
             >
               Delete
