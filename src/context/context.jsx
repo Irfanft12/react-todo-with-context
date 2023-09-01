@@ -60,11 +60,11 @@ function TodoContextProvider(props) {
                     return t.id !== item.id
                 })
                 setTodoList(newTodoList)
-                MySwal.fire(
-                    'Deleted!',
-                    'Your file has been deleted.',
-                    'success'
-                )
+                MySwal.fire({
+                    title:  'Deleted!',
+                    html:  `<b>${item.todoName}</b> has been deleted.</b>`,
+                    icon: 'success'
+                })
             }
           })
 
