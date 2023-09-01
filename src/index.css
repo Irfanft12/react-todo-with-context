@@ -134,15 +134,15 @@ li {
   position: absolute;
 }
 .check-circle {
-  /* position: absolute; */
-  top: 6px;
-  left: 8px;
   width: 20px;
   height: 20px;
   border-radius: 10px;
   border: 1px solid #f6752c;
   display: block;
   margin-right: 6px;
+  text-align: center;
+  line-height: 19px;
+  color: #ffffff;
 }
 .check-circle.completed {
   background-color: #f6752c;

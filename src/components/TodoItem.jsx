@@ -26,7 +26,9 @@ export default function TodoItem({ item }) {
               className={
                 item.completed ? "check-circle completed" : "check-circle"
               }
-            ></span>
+            >
+              {item.completed && <span>✓</span>}
+            </span>
             <span
               className={item.completed ? "todo-name completed" : "todo-name"}
             >
