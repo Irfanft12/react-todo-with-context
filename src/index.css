@@ -152,8 +152,12 @@ li {
 .btns-wrapper button {
   margin: 0 3px;
 }
+.delete-btn,
 .edit-btn {
   background-color: #ffc369;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 4px 8px;
 }
 .delete-btn {
   background-color: #fd422a;
