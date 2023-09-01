@@ -135,11 +135,11 @@ li {
   width: 20px;
   height: 20px;
   border-radius: 10px;
-  border: 1px solid #ffc369;
+  border: 1px solid #f6752c;
   display: block;
 }
 .check-circle.completed {
-  background-color: #ffc369;
+  background-color: #f6752c;
 }
 .todo-name {
   font-weight: 600;
@@ -147,7 +147,7 @@ li {
 }
 .todo-name.completed {
   text-decoration: line-through;
-  color: #aaaaaa;
+  opacity: .7;
 }
 .btns-wrapper button {
   margin: 0 3px;
@@ -158,6 +158,7 @@ li {
   font-size: 12px;
   font-weight: 400;
   padding: 4px 8px;
+  color: #333333;
 }
 .delete-btn {
   background-color: #fd422a;
