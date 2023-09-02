@@ -130,6 +130,7 @@ ul {
   padding: 0;
   margin: 0;
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 li {
   margin-bottom: 6px;
@@ -212,6 +213,22 @@ li {
 div:where(.swal2-container) button:where(.swal2-styled).swal2-default-outline:focus {
   box-shadow: 0 0 0 3px rgba(230, 129, 98, 0.5) !important;
 }
+.count-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding: 5px;
+  color: #f6752c;
+  border: 1px solid #ffd1b6;
+  position: fixed;
+  bottom: 0;
+  width: 600px;
+  max-width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

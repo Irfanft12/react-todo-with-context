@@ -7,6 +7,9 @@ const TodoContext = createContext()
 
 function TodoContextProvider(props) {
     const [todo, setTodo] = useState("")
+    const [completedList, setCompletedList] = useState([])
+    const [incompleteList, setIncompleteList] = useState([])
+
     const [todoList, setTodoList] = useState(() => {
         const savedItems = localStorage.getItem("todos")
         if (savedItems) {
@@ -19,6 +22,16 @@ function TodoContextProvider(props) {
 
     useEffect(() => {
         localStorage.setItem("todos", JSON.stringify(todoList))
+
+        const completedTodos = todoList.filter(t => {
+            return t.completed
+        })
+        setCompletedList(completedTodos)
+
+        const incompleteTodos = todoList.filter(t => {
+            return !t.completed
+        })
+        setIncompleteList(incompleteTodos)
     }, [todoList])
 
     function handleTodoChange(e) {
@@ -90,7 +103,9 @@ function TodoContextProvider(props) {
         todoList,
         addError,
         handleTodoDelete,
-        handleTodoUpdate
+        handleTodoUpdate,
+        completedList,
+        incompleteList
     }
 
     return (

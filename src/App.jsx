@@ -1,4 +1,5 @@
 import AddTodo from './components/AddTodo'
+import TodoCount from './components/TodoCount'
 import TodoList from './components/TodoList'
 import logo from "/logo.svg"
 
@@ -12,8 +13,9 @@ function App() {
       </header>
       <main>
         <AddTodo />
-        <TodoList />
+        <TodoList />        
       </main>
+      <TodoCount />
     </>
     
   )
