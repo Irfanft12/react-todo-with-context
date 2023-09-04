@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useCallback } from "react";
 import { TodoContext } from "../context/context";
 
 export default function AddTodo() {
@@ -14,12 +14,12 @@ export default function AddTodo() {
                     className="add-input"
                     value={context.todo}
                     onChange={(e) => context.handleTodoChange(e)}
+                    autoFocus
                 />
             </label>      
             <button className="add-btn">Add</button>
         </div>
         {context.addError && <p className="add-error">Type somthing in the box above</p>}
-        
     </form>
   );
 }
