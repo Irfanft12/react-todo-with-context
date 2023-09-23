@@ -57,9 +57,6 @@ function TodoContextProvider(props) {
     function handleTodoDelete(item) {
         const MySwal = withReactContent(Swal)
         MySwal.fire({
-            // title: <strong>Good job!</strong>,
-            // html: <i>You clicked the button!</i>,
-            // icon: 'success'
             title: 'Are you sure?',
             html: `<span>You won't be able to revert <b>${item.todoName}</b>!</span>`,
             icon: 'warning',
@@ -80,8 +77,6 @@ function TodoContextProvider(props) {
                 })
             }
           })
-
-        
     }
 
     function handleTodoUpdate(nt) {
@@ -96,6 +91,28 @@ function TodoContextProvider(props) {
         setTodoList(newTodoList)
     }
 
+    function handleClearClick() {
+        const MySwal = withReactContent(Swal)
+        MySwal.fire({
+            title: 'Are you sure?',
+            html: `<span>You won't be able to revert <b>${todoList.length} items</b>!</span>`,
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Yes, delete all!'
+          }).then(result => {
+            if (result.isConfirmed) {
+                setTodoList([])
+                MySwal.fire({
+                    title:  'Deleted!',
+                    html:  `<b>${todoList.length} items</b> has been deleted.</b>`,
+                    icon: 'success'
+                })
+            }
+          })
+    }
+
     const value = {
         todo,
         handleTodoChange,
@@ -105,7 +122,8 @@ function TodoContextProvider(props) {
         handleTodoDelete,
         handleTodoUpdate,
         completedList,
-        incompleteList
+        incompleteList,
+        handleClearClick
     }
 
     return (
