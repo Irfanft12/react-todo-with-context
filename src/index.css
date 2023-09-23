@@ -218,7 +218,6 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-default-outline:fo
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: transparent;
   padding: 5px;
   color: #f6752c;
   border: 1px solid #ffd1b6;
@@ -228,6 +227,7 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-default-outline:fo
   max-width: 100%;
   left: 50%;
   transform: translateX(-50%);
+  background-color: #fffaf3;
 }
 .clear-btn-wrapper {
   text-align: right;

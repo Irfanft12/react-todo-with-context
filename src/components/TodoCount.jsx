@@ -9,9 +9,8 @@ export default function TodoCount() {
             <div className="total-count">
                 Total: <b>{context.todoList.length}</b>
             </div>
-            <div className="completed-count">Completed: {context.completedList.length}</div>
-            <div className="completed-count">Incomplete: {context.incompleteList.length}</div>
-
+            <div className="completed-count">Completed: <b>{context.completedList.length}</b></div>
+            <div className="completed-count">Incomplete: <b>{context.incompleteList.length}</b> </div>
         </div>
     )
 }
